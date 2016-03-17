@@ -7,12 +7,22 @@ window.addEventListener('load', function() {
         var picker = new jscolor(input);
         picker.fromRGB(Math.floor(Math.random()*255), Math.floor(Math.random()*255), Math.floor(Math.random()*255))
         document.getElementById("barve").appendChild(input);
-	}
+	};
 	
 	document.querySelector("#novaBarva") 
 		.addEventListener('click', dodajBarvo);
 		
 	//Odstrani barve
+	var odstraniBarve = function(event) {
+		console.log("lol");
+		for (var i = 0; i < vrednosti.length; i++){
+			console.log("lol");
+			var temp = vrednosti[i];
+			document.querySelector("#barva").removeChild(temp);
+		}
+	}
+	
+	document.querySelector("#odstraniBarve").addEventListener('click', odstraniBarve);
 	
 	//Stroboskop
 	var vrednosti = [];
