@@ -22,7 +22,8 @@ window.addEventListener('load', function() {
 		}
 	}
 	
-	document.querySelector("#odstraniBarve").addEventListener('click', odstraniBarve);
+	document.querySelector("#odstraniBarve")
+		.addEventListener('click', odstraniBarve);
 	
 	//Stroboskop
 	var vrednosti = [];
@@ -62,8 +63,16 @@ window.addEventListener('load', function() {
 			vrednosti.push(barva.innerHTML);
 		}
 		
-		minCas = 1000;
-		maxCas = 1000;
+		var minCas = document.querySelector("#min").value;
+		var maxCas = document.querySelector("#max").value;
+		
+		if ( minCas > maxCas) {
+			
+			var temp = minCas;
+			minCas = maxCas;
+			maxCas = temp;
+		}
+		
 		spremeniBarvo(0);
 		
 		var start = document.querySelector("#start");
