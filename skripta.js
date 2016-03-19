@@ -58,8 +58,8 @@ window.addEventListener('load', function() {
 			vrednosti.push(barva.innerHTML);
 		}
 		
-		var minCas = document.querySelector("#min").value;
-		var maxCas = document.querySelector("#max").value;
+		minCas = document.querySelector("#min").value;
+		maxCas = document.querySelector("#max").value;
 		
 		if ( minCas > maxCas) {
 			
