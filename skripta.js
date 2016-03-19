@@ -13,6 +13,7 @@ window.addEventListener('load', function() {
 		.addEventListener('click', dodajBarvo);
 		
 	//Odstrani barve
+
 	var odstraniVse = function(event) {
 		document.querySelector("#barve").innerHTML = "";
 	}
