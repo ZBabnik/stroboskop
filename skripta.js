@@ -14,12 +14,7 @@ window.addEventListener('load', function() {
 		
 	//Odstrani barve
 	var odstraniBarve = function(event) {
-		console.log("lol");
-		for (var i = 0; i < vrednosti.length; i++){
-			console.log("lol");
-			var temp = vrednosti[i];
-			document.querySelector("#barva").removeChild(temp);
-		}
+		document.querySelector("#barve").innerHTML = "";
 	}
 	
 	document.querySelector("#odstraniBarve")
